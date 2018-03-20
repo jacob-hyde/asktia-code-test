@@ -1,0 +1,13 @@
+<header class="container margin-tb">
+  <div ngbDropdown>
+      <button class="btn h1" role="button" id="ledgerLinks" ngbDropdownToggle>
+        Investing Account
+      </button>
+
+      <div ngbDropdownMenu aria-labelledby="ledgerLinks">
+        <a class="dropdown-item" routerLinkActive="active" routerLink="/ledger/simple-ledger">Simple Ledger</a>
+        <a class="dropdown-item" routerLinkActive="active" routerLink="/ledger/duplicate-ledger">Duplicate Ledger</a>
+        <a class="dropdown-item" routerLinkActive="active" routerLink="/ledger/complicated-ledger">Complicated Ledger</a>
+      </div>
+  </div>
+</header>

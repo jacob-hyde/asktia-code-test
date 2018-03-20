@@ -1,0 +1,68 @@
+@import '_variables';
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,700');
+body, html
+{
+	font-family: 'Roboto', sans-serif, Arial;
+}
+body
+{
+	color: $gray;
+	font-weight: 300;
+}
+h1, .h1
+{
+	letter-spacing: -1px;
+	font-size: 20px;
+	font-weight: 100;
+	margin: 0;
+	line-height: 26px;
+	color: $gray;
+}
+p
+{
+	font-size: 25px;
+	color: $dark-gray;
+}
+a
+{
+	@extend .h1;
+	font-size: 16px;
+	line-height: 18px;
+	color: $gray !important;
+	font-weight: 100 !important;
+}
+.dark-gray-text
+{
+	color: $dark-gray;
+}
+.margin-tb
+{
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.margin-tb-sm
+{
+	@media(max-width: 720px)
+	{
+		margin-top: 25px !important;
+		margin-bottom: 25px !important;
+	}
+}
+.margin-tb-2
+{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.padding-tb
+{
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+.font-weight-normal
+{
+	font-weight: 200;
+}
+.font-weight-400
+{
+	font-weight: 400;
+}

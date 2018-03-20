@@ -1,0 +1,42 @@
+<app-header></app-header>
+<app-balance></app-balance>
+<div class="container margin-tb-2 margin-tb-sm">
+  <p *ngIf="isError">
+    <ngb-alert [type]="'danger'" [dismissible]="false">
+      <strong>Error!</strong> Invalid Ledger
+    </ngb-alert>
+    </p>
+  <p>Past Transactions</p>
+  <div class="table-responsive">
+    <table class="table" id="transactions-table">
+      <thead>
+        <tr>
+          <th width="10%">Date</th>
+          <th width="12%">Transaction</th>
+          <th width="50%"></th>
+          <th width="14%" class="text-right">Amount</th>
+          <th width="14%" class="text-right">Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of ledgerItems">
+          <td>
+            {{item.date | date:'M/dd/yy'}}
+          </td>
+          <td class="font-weight-400">
+            {{item.type | titlecase}}
+          </td>
+          <td>
+            {{item.description}}
+          </td>
+          <td class="text-right" [ngClass]="{'font-weight-bold dark-gray-text' : item.amount < 0}">
+            {{item.amount | currency}}
+          </td>
+          <td class="text-right" [ngClass]="{'font-weight-bold dark-gray-text' : item.balance <= 0}">
+            {{item.balance | currency}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

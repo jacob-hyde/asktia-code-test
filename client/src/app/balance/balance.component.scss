@@ -1,0 +1,15 @@
+@import '../../_variables';
+#balance-container
+{
+	background-color: $light-gray;
+	#balance
+	{
+		font-weight: 300;
+		font-size: 30px;
+		color: $dark-gray;
+		& + h3
+		{
+			margin-top: 2px;
+		}
+	}
+}

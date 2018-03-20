@@ -1,0 +1,43 @@
+[
+    {
+        "activity_id": "1",
+        "date": "2014-10-01T01:00:29+00:00",
+        "type": "DEPOSIT",
+        "method": "ACH",
+        "amount": 1003.75,
+        "balance": 1003.75,
+        "requester": {
+            "type": "INVESTMENT"
+        },
+        "source": {
+            "type": "EXTERNAL",
+            "id": 18238147,
+            "description": "Chase ** 9867"
+        },
+        "destination": {
+            "type": "INVESTOR",
+            "id": 76510190788,
+            "description": "Michael Daugherty"
+        }
+    },
+    {
+        "activity_id": "2",
+        "date": "2014-10-01T01:00:30+00:00",
+        "type": "INVESTMENT",
+        "amount": -999.50,
+        "balance": 4.25,
+        "requester": {
+            "type": "INVESTMENT"
+        },
+        "source": {
+            "type": "INVESTOR",
+            "id": 76510190788,
+            "description": "Investor description"
+        },
+        "destination": {
+            "type": "CAMPAIGN_FUND",
+            "id": "899b188040fd01315c6206cbae434dcb",
+            "description": "Uber Technologies"
+        }
+    }
+]
