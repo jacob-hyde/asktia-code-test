@@ -50,7 +50,7 @@ Transaction descriptions are simple yet descriptive enough to understand each tr
 
 Bootstrap is used for a responsive layout.
 
-The choice to use Angular was to demostrate a deep understanding of ES6 and TypeScript. Unit tests and E2E testing was not implemented, to ensure application usage and failures to fix.
+The choice to use Angular was to demostrate a deep understanding of ES6 and TypeScript. Unit tests and E2E testing was not implemented, but could be to ensure application usage and failures to fix.
 
 ## Deployment
 
