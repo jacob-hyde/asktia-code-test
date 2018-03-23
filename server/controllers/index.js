@@ -25,15 +25,26 @@ router.get('/ledger/:name', function (req, res) {
             if (err) throw err;
             let ledger = JSON.parse(data);
             
-            //they come in the correct sequence, even if duplicate
             ledger.forEach((transaction,i) => {
                 for(let j = ++i; j < ledger.length; j++)
                 {
                     if(transaction.activity_id == ledger[j].activity_id) ledger.splice(j, 1);
                 }
             });
-            //sort by date
-            ledger.sort((a,b) => new Date(b.date) - new Date(a.date));
+
+            ledger.sort((a,b) => {
+                var diff = new Date(b.date) - new Date(a.date);
+                if(diff == 0)
+                {
+                    var swapBalances = a.balance - (parseFloat(a.balance) + parseFloat(b.amount));
+                    if(swapBalances > 0) return 1;
+                    else return 0;
+                }
+                else return new Date(b.date) - new Date(a.date);
+            });
+            
+
+
 
             res.json(ledger);
         });
